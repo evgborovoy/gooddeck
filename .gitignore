@@ -3,3 +3,6 @@ db.sqlite3
 .DS_Store
 main/__pycache__/
 main/migrations/__pycache__/
+
+gooddeck/__pycache__/settings.cpython-311.pyc
+
