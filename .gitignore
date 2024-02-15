@@ -7,4 +7,5 @@ goods/__pycache__/
 goods/migrations/__pycache__/
 gooddeck/__pycache__/
 media/
+goods/templatetags/__pycache__/
 

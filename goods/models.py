@@ -16,6 +16,7 @@ class Categories(models.Model):
 class Products(models.Model):
     class Meta:
         db_table = "product"
+        ordering = ("id",)
 
     name = models.CharField(max_length=70, unique=True)
     slug = models.SlugField(max_length=100, unique=True, blank=True, null=True)
@@ -28,3 +29,12 @@ class Products(models.Model):
 
     def __str__(self):
         return self.name
+
+    def display_id(self):
+        return f"{self.id:05}"
+
+    def sell_price(self):
+        if self.discount:
+            return round(self.price - self.price * self.discount / 100, 2)
+
+        return self.price
